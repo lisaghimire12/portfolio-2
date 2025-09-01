@@ -16,8 +16,8 @@ function Homepage() {
     const navigate = useNavigate();
 
     const handleHomeClick = () => {
-    navigate('/');
-  };
+        navigate('/');
+    };
 
     const projectsRef = useRef(null);
     const scrollToProjects = () => {
@@ -29,72 +29,65 @@ function Homepage() {
         <>
             {/* <Navbar onProjectsClick={scrollToProjects} handleHomeClick={handleHomeClick} />             */}
             <div id='first'>
-            <div id='intro'>
-                <h3 className='text' >Hey,I'm Lisa👋🏻</h3>
-                <h1 className='ug' >UG B.Tech <br></br>IT Student</h1>
-                <h3 className='text1' >I'm a IT undergrad at VIT, Vellore <br></br>
-                    creating clean, impactful digital experiences.</h3>
-                <button id='intro-button1' onClick={() => navigate('/more')} >Get In Touch</button>
-                <button id='intro-button2' onClick={scrollToProjects} >Browse Projects</button>
+                <div id='intro'>
+                    <h3 className='text' >Hey,I'm Lisa👋🏻</h3>
+                    <h1 className='ug' >UG B.Tech <br></br>IT Student</h1>
+                    <h3 className='text1' >I'm a IT undergrad at VIT, Vellore <br></br>
+                        creating clean, impactful digital experiences.</h3>
+                    <button id='intro-button1' onClick={() => navigate('/more')} >Get In Touch</button>
+                    <button id='intro-button2' onClick={scrollToProjects} >Browse Projects</button>
+                </div>
+                <div id='image' >
+                    <img id='inner' src={Image} alt='image'></img>
+                </div>
             </div>
-            <div id='image' >
-                <img id='inner' src={Image} alt='image'></img>
-            </div>
-            </div>
-            
+
             <h2 className='text2' >Projects<span style={{ color: "#67485A" }} >.</span></h2>
             <div id='projects' ref={projectsRef}>
                 <div className='project'>
-                <button id='proj1'  
-                onClick={() => window.open("https://e-commerse-opal.vercel.app/", "_blank")}>
-                    <img id='proj-img' src={Image2} alt='project1'>
-                    </img>
-                </button>
-                <h3 id='topic' >CLICON</h3>
-                <p id='description'>E-commerce platform showcasing eco-friendly products using React and product API integration</p>
+                    <a href="https://e-commerse-opal.vercel.app/" target="_blank" >
+                        <img className='proj-img' src={Image2} alt='CLICON project screenshot' />
+                    </a>
+                    <h3 className='topic'>CLICON</h3>
+                    <p className='description'>
+                        A React-based e-commerce platform for eco-friendly products. Integrated with a product API to fetch and display product data dynamically.
+                    </p>
                 </div>
 
                 <div className='project'>
-                <button id='proj2' 
-                onClick={() => window.open("https://translator-ebon-eight.vercel.app/", "_blank")}>
-                    <img id='proj-img' src={Image10} alt='project1'></img>
-                </button>
-                <h3 id='topic'>TRANSLATOR.IO</h3>
-                <p id='description'> Translator app built with React(JSX), enabling seamless multilingual text conversion using external APIs that features language,text-to-speech and clipboard support.</p>
+                    <a href="https://translator-ebon-eight.vercel.app/" target="_blank">
+                     <img className='proj-img' src={Image10} alt='Translator project screenshot' />
+                    </a>
+                    <h3 className='topic'>TRANSLATOR.IO</h3>
+                    <p className='description'> Translator app built with React(JSX), enabling seamless multilingual text conversion using external APIs that features language,text-to-speech and clipboard support.</p>
                 </div>
 
                 <div className='project'>
-                <button id='proj3' >
-                    <img id='proj-img' src={Image4} alt='project3'
-                        onClick={() => window.open("https://conference-ticket-generator-black.vercel.app/", "_blank")}
-                    >
-                    </img>
-                </button>
-                <h3 id='topic' >CODING-CONF</h3>
-                <p id='description'>Conference ticket generator built with React(JSX), allowing users to fill and validate form details. Generates a personalized ticket on submission with responsive <br></br>
-                    and accessible design products using React and product API integration</p>
+                    <a href="https://conference-ticket-generator-black.vercel.app/" target="_blank">
+                    <img className='proj-img' src={Image4} alt='Conference project screenshot' />
+                    </a>
+                    <h3 className='topic' >CODING-CONF</h3>
+                    <p className='description'>Conference ticket generator built with React(JSX), allowing users to fill and validate form details. Generates a personalized ticket on submission with responsive <br></br>
+                        and accessible design products using React and product API integration</p>
                 </div>
 
                 <div className='project'>
-                <button id='proj4' >
-                    <img id='proj-img' src={Image5} alt='project4'
-                        onClick={() => window.open("https://lisaghimire12.pythonanywhere.com/", "_blank")}
-                    >
-                    </img>
-                </button>
-                <h3 id='topic' >Event Manager</h3>
-                <p id='description'>
-                    Developed a full-stack event management web application using Django with integrated Bootstrap UI for responsive design. The platform enables users to create, view, update, and delete events, while administrators can manage all events via a customized Django admin panel.
+                    <a href="https://lisaghimire12.pythonanywhere.com/" target="_blank">
+                    <img className='proj-img' src={Image5} alt='EventManager project screenshot' />
+                    </a>
+                    <h3 className='topic' >Event Manager</h3>
+                    <p className='description'>
+                        Developed a full-stack event management web application using Django with integrated Bootstrap UI for responsive design. The platform enables users to create, view, update, and delete events, while administrators can manage all events via a customized Django admin panel.
 
-                </p>
+                    </p>
 
-            </div>
+                </div>
             </div>
 
 
-            <div id='experience' > 
+            <div id='experience' >
                 <h2 className='text2' >Experience<span style={{ color: "#67485A" }} >.</span></h2>
-                   <h3 className='ex-h3'>Front end Development Intern
+                <h3 className='ex-h3'>Front end Development Intern
                     <span style={{ color: "#67485A" }} > <t></t>
                         @Rara Labs
                     </span>
@@ -107,53 +100,53 @@ function Homepage() {
                 </ul>
             </div>
 
-                <h2 className='text2' >Skills<span style={{ color: "#67485A" }} >.</span></h2>
-             <div className='skills' >
+            <h2 className='text2' >Skills<span style={{ color: "#67485A" }} >.</span></h2>
+            <div className='skills' >
                 <div id='web'>
-                <h3 className='sk-text' >
-                    Web Design </h3>
+                    <h3 className='sk-text' >
+                        Web Design </h3>
                     <div className='list'>
-                    <p>UI/UX Design</p>
-                    <p>Responsive Design</p>
-                    <p>Wireframing</p>
-                    <p>User Research</p>
+                        <p>UI/UX Design</p>
+                        <p>Responsive Design</p>
+                        <p>Wireframing</p>
+                        <p>User Research</p>
                     </div>
                 </div>
-        
-            <div id='frontend'>
-            <h3 className='sk-text'>
-                Frontend </h3>
-                <div className='list'>
-                <p>Javascript</p>
-                <p>ReactJS</p>
-                <p>CSS3</p>
+
+                <div id='frontend'>
+                    <h3 className='sk-text'>
+                        Frontend </h3>
+                    <div className='list'>
+                        <p>Javascript</p>
+                        <p>ReactJS</p>
+                        <p>CSS3</p>
+                    </div>
+                </div>
+
+                <div id='backend'>
+                    <h3 className='sk-text'>
+                        Backend </h3>
+                    <div className='list'>
+                        <p>Version control (Git/GitHub)</p>
+                        <p>MondoDB</p>
+                        <p>SQL</p>
+                    </div>
+                </div>
+
+                <div id='ss'>
+                    <h3 className='sk-text'>
+                        Soft Skills </h3>
+                    <div className='list'>
+                        <p>Effective communication</p>
+                        <p>Collaboration</p>
+                        <p>Commitment</p>
+                        <p>Leadership</p>
+                    </div>
                 </div>
             </div>
 
-            <div id='backend'>
-            <h3 className='sk-text'>
-                Backend </h3>
-                <div className='list'>
-                <p>Version control (Git/GitHub)</p>
-                <p>MondoDB</p>
-                <p>SQL</p>
-                </div>
-            </div>
-
-            <div id='ss'>
-            <h3 className='sk-text'>
-                Soft Skills </h3>
-                <div className='list'>
-                <p>Effective communication</p>
-                <p>Collaboration</p>
-                <p>Commitment</p>
-                <p>Leadership</p>
-                </div>
-            </div>
-            </div>
 
 
-            
             <div id='story' >
                 <h2 className='text2' >My Story<span style={{ color: "#67485A" }} >.</span></h2>
 
