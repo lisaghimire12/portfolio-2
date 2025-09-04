@@ -1,7 +1,7 @@
 import { Navigate, useNavigate } from 'react-router-dom';
 import { useRef } from 'react';
 import './Backup.css';
-// import Navbar from './Navbar';
+import Navbar from './Navbar';
 import Image from '/src/assets/images/picture.png'
 import Image2 from '/src/assets/images/ecommerce.png'
 import Image3 from '/src/assets/images/translate.png'
@@ -27,7 +27,7 @@ function Homepage() {
 
     return (
         <>
-            {/* <Navbar onProjectsClick={scrollToProjects} handleHomeClick={handleHomeClick} />             */}
+            <Navbar onProjectsClick={scrollToProjects} handleHomeClick={handleHomeClick} />
             <div id='first'>
                 <div id='intro'>
                     <h3 className='text' >Hey,I'm Lisa👋🏻</h3>
@@ -56,15 +56,17 @@ function Homepage() {
 
                 <div className='project'>
                     <a href="https://translator-ebon-eight.vercel.app/" target="_blank">
-                     <img className='proj-img' src={Image10} alt='Translator project screenshot' />
+                        <img className='proj-img' src={Image10} alt='Translator project screenshot' />
                     </a>
-                    <h3 className='topic'>TRANSLATOR.IO</h3>
-                    <p className='description'> Translator app built with React(JSX), enabling seamless multilingual text conversion using external APIs that features language,text-to-speech and clipboard support.</p>
+                    <h3 className='topic'>WeatherWear</h3>
+                    <p className='description'> WeatherWear is a Django web app that fetches real-time weather using the
+                        OpenWeather API and suggests outfit ideas by providing curated Pinterest links,
+                        helping users dress appropriately and explore style inspiration.</p>
                 </div>
 
                 <div className='project'>
                     <a href="https://conference-ticket-generator-black.vercel.app/" target="_blank">
-                    <img className='proj-img' src={Image4} alt='Conference project screenshot' />
+                        <img className='proj-img' src={Image4} alt='Conference project screenshot' />
                     </a>
                     <h3 className='topic' >CODING-CONF</h3>
                     <p className='description'>Conference ticket generator built with React(JSX), allowing users to fill and validate form details. Generates a personalized ticket on submission with responsive <br></br>
@@ -73,7 +75,7 @@ function Homepage() {
 
                 <div className='project'>
                     <a href="https://lisaghimire12.pythonanywhere.com/" target="_blank">
-                    <img className='proj-img' src={Image5} alt='EventManager project screenshot' />
+                        <img className='proj-img' src={Image5} alt='EventManager project screenshot' />
                     </a>
                     <h3 className='topic' >Event Manager</h3>
                     <p className='description'>
