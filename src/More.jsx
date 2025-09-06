@@ -6,7 +6,7 @@ import contact from '/src/assets/images/contact.svg';
 import mail from '/src/assets/images/mail.svg';
 
 
-function More() {
+function More({theme,setTheme}) {
     const navigate = useNavigate();
 
     const handleHomeClick = () => {
@@ -15,7 +15,11 @@ function More() {
 
     return (
         <>
-            <Navbar handleHomeClick={handleHomeClick} />
+            <Navbar 
+            handleHomeClick={handleHomeClick} 
+            theme={theme}
+            setTheme={setTheme}
+            />
 
 
             <div id="more-wrapper">

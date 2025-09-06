@@ -1,3 +1,6 @@
+@import "tailwindcss";
+
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -26,8 +29,7 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
+
   min-width: 320px;
   min-height: 100vh;
 }
@@ -54,6 +56,22 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+
+body.light{
+  background-color: rgb(240, 242, 245);
+  color: black;
+  h1,ul {
+    color: black;
+  }
+.topic,.description,.text2,
+.ex-p , .navbar-button{
+  color: black;
+}
+#p-story, #name{
+  color: black;
+}
 }
 
 @media (prefers-color-scheme: light) {
